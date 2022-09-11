@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+    color: #fff;
+    padding: 30px;
+    /* margin: 30px; */
+    /* width: 100vw; */
+}
+
+.board{
+    /* border: 1px solid white; */
+    margin: auto;
+    width: 80vw;
+    height: 50vh;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+.row{
+    /* border: 1px solid red; */
+    height: calc(50vh / 3);
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+}
+.tiles{
+    border: 1px solid white;
+    height: 100%;
+    width: calc(80vw / 3);
+}
