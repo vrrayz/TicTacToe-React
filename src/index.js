@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 let tileKey = 1;
+let currentEntry = "X"
 
 const Board = () => {
   return (
@@ -17,14 +18,25 @@ const Board = () => {
 const Row = () => {
   return (
     <div className="row">
-      <Tiles/>
-      <Tiles />
-      <Tiles />
+      <Tiles key={tileKey++}/>
+      <Tiles key={tileKey++}/>
+      <Tiles key={tileKey++}/>
     </div>
   );
 };
 const Tiles = () => {
-  return <div className="tiles">{tileKey++}</div>;
+  const clickHandler = (e) => {
+    if(e.target.innerText == ""){
+      e.target.innerText = currentEntry
+      changeEntry();
+    }
+  }
+  return <div className="tiles" onClick={clickHandler}></div>;
 };
+
+const changeEntry = () => {
+  if(currentEntry == "X") currentEntry = "O";
+  else if(currentEntry == "O") currentEntry = "X";
+}
 
 ReactDOM.render(<Board />, document.getElementById("root"));
