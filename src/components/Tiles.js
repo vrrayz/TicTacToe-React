@@ -44,7 +44,10 @@ const recordMoves = (entry, tileId) =>{
   
     checkMoves(entry)
   
-    if(timesPlayed["X"] === 5 && timesPlayed["O"] === 4) alert("Game over");
+    if(timesPlayed["X"] === 5 && timesPlayed["O"] === 4) {
+        alert("Game ends in a draw")
+        resetGame()
+    };
   
   
   }
