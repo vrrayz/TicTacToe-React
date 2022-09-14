@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
 body{
     background-color: black;
     color: #fff;
     padding: 30px;
+    font-family: 'Rubik Moonrocks', cursive;
     /* margin: 30px; */
     /* width: 100vw; */
 }
@@ -27,7 +29,10 @@ body{
     height: 100%;
     width: calc(80vw / 3);
     text-align: center;
-    font-size: 32px;
+    font-size: 64px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .tiles:hover{
     background-color: rgba(255, 255, 255, 0.5);
