@@ -20,7 +20,7 @@ let timesPlayed = {
 const Tiles = ({id}) => {
     const clickHandler = (e) => {
       
-      if(e.target.innerText == ""){
+      if(e.target.innerText === ""){
         e.target.innerText = currentEntry
         changeEntry();
         recordMoves(e.target.innerText, id);
@@ -30,8 +30,8 @@ const Tiles = ({id}) => {
 };
 
 const changeEntry = () => {
-    if(currentEntry == "X") currentEntry = "O";
-    else if(currentEntry == "O") currentEntry = "X";
+    if(currentEntry === "X") currentEntry = "O";
+    else if(currentEntry === "O") currentEntry = "X";
 }
 
 const recordMoves = (entry, tileId) =>{  
@@ -44,7 +44,7 @@ const recordMoves = (entry, tileId) =>{
   
     checkMoves(entry)
   
-    if(timesPlayed["X"] == 5 && timesPlayed["O"] == 4) alert("Game over");
+    if(timesPlayed["X"] === 5 && timesPlayed["O"] === 4) alert("Game over");
   
   
   }
@@ -56,7 +56,7 @@ const recordMoves = (entry, tileId) =>{
       let currentWinningMoves =  winningMoves.filter(x => {
         return x.every((item) => tilesPlayed[entry].indexOf(item) >= 0)
       })
-      if(currentWinningMoves.length == 1){
+      if(currentWinningMoves.length === 1){
         alert(entry + " wins this round");
         resetGame();
       }

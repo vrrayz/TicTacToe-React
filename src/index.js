@@ -1,11 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Tiles from "./components/Tiles";
-
+import Row from "./components/Row";
 import "./index.css";
-
-let tileKey = 1;
 
 const Board = () => {
   return (
@@ -16,18 +13,9 @@ const Board = () => {
     </div>
   );
 };
-const Row = () => {
-  return (
-    <div className="row">
-      <Tiles id={tileKey++}/>
-      <Tiles id={tileKey++}/>
-      <Tiles id={tileKey++}/>
-    </div>
-  );
-};
 
 /**
- * 
+ *
  * X has 5 ticks to make max
  * O has 4 ticks to make max
  */
